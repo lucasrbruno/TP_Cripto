@@ -15,6 +15,7 @@ def elGamal_encr(mensagem1, mensagem2, curva, pontop, q):
 		print("ERRO: P fora da curva")
 		return
 <<<<<<< HEAD
+<<<<<<< HEAD
 	while(True):	
 		k = randint(2, primo)	#chave efemera
 		r = multiplicacaoPonto(pontop, curva, k)
@@ -28,6 +29,8 @@ def elGamal_encr(mensagem1, mensagem2, curva, pontop, q):
 				print("\nC1 = " + str(c1) +"\nC2 = " + str(c2) + "\nR = " + str(r.x), str(r.y))
 				break
 =======
+=======
+>>>>>>> 351cf8f128ab6a68ba8aff57bdaac8aa213f72e9
 	k = randint(2, primo)	#chave efemera
 	#k = 2
 	r = multiplicacaoPonto(pontop, curva, k)
@@ -37,6 +40,9 @@ def elGamal_encr(mensagem1, mensagem2, curva, pontop, q):
 	c2 = (s.y * mensagem2) % primo
 	c = Criptograma(r, c1, c2)
 	print("\nC1 = " + str(c1) +"\nC2 = " + str(c2) + "\nR = " + str(r.x), str(r.y))
+<<<<<<< HEAD
+>>>>>>> 351cf8f128ab6a68ba8aff57bdaac8aa213f72e9
+=======
 >>>>>>> 351cf8f128ab6a68ba8aff57bdaac8aa213f72e9
 	return c 
 
@@ -49,6 +55,7 @@ def elGamal_decr(c, curva, secretkey):
 	print("\nM1 = " + str(m1) +"\nM2 = " + str(m2))
 	return 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #primo = 0xFFFFFFFF00000001000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFF
 #a = 0xFFFFFFFF00000001000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFC
@@ -64,6 +71,8 @@ publickey_2 = multiplicacaoPonto(publickey_1, curva, secretkey)
 mensagem1 = 21
 mensagem2 = 27
 =======
+=======
+>>>>>>> 351cf8f128ab6a68ba8aff57bdaac8aa213f72e9
 primo = 0xFFFFFFFF00000001000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFF
 a = 0xFFFFFFFF00000001000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFC
 b = 0x5AC635D8AA3A93E7B3EBBD55769886BC651D06B0CC53B0F63BCE3C3E27D2604B
@@ -78,6 +87,9 @@ publickey_2 = multiplicacaoPonto(publickey_1, curva, secretkey)
 #q = multiplicacaoPonto(ponto, curva, chavea)
 mensagem1 = 15453
 mensagem2 = 36325
+<<<<<<< HEAD
+>>>>>>> 351cf8f128ab6a68ba8aff57bdaac8aa213f72e9
+=======
 >>>>>>> 351cf8f128ab6a68ba8aff57bdaac8aa213f72e9
 cript = elGamal_encr(mensagem1, mensagem2, curva, publickey_1, publickey_2)
 elGamal_decr(cript, curva, secretkey)

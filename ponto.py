@@ -22,15 +22,21 @@ def somaPontos(ponto1, ponto2, curva):
 	
 	if ponto1.infinito_bool == True:
 <<<<<<< HEAD
+<<<<<<< HEAD
 		return ponto2
 	
 	if ponto2.infinito_bool == True:
 =======
+=======
+>>>>>>> 351cf8f128ab6a68ba8aff57bdaac8aa213f72e9
 		print("RES = PONTO_2")
 		return ponto2
 	
 	if ponto2.infinito_bool == True:
 		print("RES = PONTO_1")
+<<<<<<< HEAD
+>>>>>>> 351cf8f128ab6a68ba8aff57bdaac8aa213f72e9
+=======
 >>>>>>> 351cf8f128ab6a68ba8aff57bdaac8aa213f72e9
 		return ponto1
 	
@@ -48,6 +54,10 @@ def somaPontos(ponto1, ponto2, curva):
 	r_x = (m * m - ponto1.x - ponto2.x) % p
 	r_y = (m * (ponto1.x - r_x) - ponto1.y) % p
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	print(str(ponto1.x), str(ponto1.y) + " + " + str(ponto2.x), str(ponto2.y) + " = " + str(r_x), str(r_y))
+>>>>>>> 351cf8f128ab6a68ba8aff57bdaac8aa213f72e9
 =======
 	print(str(ponto1.x), str(ponto1.y) + " + " + str(ponto2.x), str(ponto2.y) + " = " + str(r_x), str(r_y))
 >>>>>>> 351cf8f128ab6a68ba8aff57bdaac8aa213f72e9
@@ -60,7 +70,13 @@ def multiplicacaoPonto(ponto, curva, n):
 	while n != 0:
 		if n % 2 == 1:
 <<<<<<< HEAD
+<<<<<<< HEAD
 			res = somaPontos(res, ponto_soma, curva)
+=======
+			print("ADDING RES:")
+			res = somaPontos(res, ponto_soma, curva)
+		print("ADDING PONTO_SOMA:")
+>>>>>>> 351cf8f128ab6a68ba8aff57bdaac8aa213f72e9
 =======
 			print("ADDING RES:")
 			res = somaPontos(res, ponto_soma, curva)
@@ -71,14 +87,20 @@ def multiplicacaoPonto(ponto, curva, n):
 	return res	
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 =======
+=======
+>>>>>>> 351cf8f128ab6a68ba8aff57bdaac8aa213f72e9
 curva = CurvaEliptica(2,1, 5)
 ponto = Ponto(0,1, False)
 som = somaPontos(ponto, ponto, curva)
 print(som.x, som.y)
 mult = multiplicacaoPonto(ponto, curva, 10)
 print(mult.x, mult.y)		
+<<<<<<< HEAD
+>>>>>>> 351cf8f128ab6a68ba8aff57bdaac8aa213f72e9
+=======
 >>>>>>> 351cf8f128ab6a68ba8aff57bdaac8aa213f72e9
 
 		
