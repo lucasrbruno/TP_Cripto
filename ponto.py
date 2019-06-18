@@ -32,7 +32,7 @@ def somaPontos(ponto1, ponto2, curva):
 
 				
 	if ponto1.x != ponto2.x and ponto1.y != ponto2.y:
-		m = ((ponto2.y - ponto1.y) * (euclidian(p, ponto2.x - ponto1.x))) % p
+		m = ((ponto2.y - ponto1.y) * (euclidian(p, (ponto2.x - ponto1.x) % p))) % p
 
 	else:
 		m = ((3 * ponto1.x * ponto1.x + curva.a) * euclidian(p, ((2 * ponto1.y) % p))) % p	 
@@ -51,6 +51,7 @@ def multiplicacaoPonto(ponto, curva, n):
 		ponto_soma = somaPontos(ponto_soma, ponto_soma, curva)
 		n = n // 2 
 	return res	
-			  
+
+	
 
 		

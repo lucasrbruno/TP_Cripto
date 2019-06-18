@@ -40,19 +40,21 @@ def elGamal_decr(c, curva, secretkey):
 
 
 
-#primo = 0xFFFFFFFF00000001000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFF
-#a = 0xFFFFFFFF00000001000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFC
-#b = 0x5AC635D8AA3A93E7B3EBBD55769886BC651D06B0CC53B0F63BCE3C3E27D2604B
-#curva = CurvaEliptica(a, b, primo)
-primo = 19
+primo = 0xFFFFFFFF00000001000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFF
+a = 0xFFFFFFFF00000001000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFC
+b = 0x5AC635D8AA3A93E7B3EBBD55769886BC651D06B0CC53B0F63BCE3C3E27D2604B
+curva = CurvaEliptica(a, b, primo)
+#primo = 73
 secretkey = randint(2, primo)
-print("Chave secreta = " + str(secretkey))
-#publickey_1 = Ponto(0x6B17D1F2E12C4247F8BCE6E563A440F277037D812DEB33A0F4A13945D898C296, 0x4FE342E2FE1A7F9B8EE7EB4A7C0F9E162BCE33576B315ECECBB6406837BF51F5, False)
-#publickey_2 = multiplicacaoPonto(publickey_1, curva, secretkey)
-curva = CurvaEliptica(4, 3, primo)
-publickey_1 = Ponto(3,17,False)
+print('Chave secreta = '  + str(secretkey))
+publickey_1 = Ponto(0x6B17D1F2E12C4247F8BCE6E563A440F277037D812DEB33A0F4A13945D898C296, 0x4FE342E2FE1A7F9B8EE7EB4A7C0F9E162BCE33576B315ECECBB6406837BF51F5, False)
 publickey_2 = multiplicacaoPonto(publickey_1, curva, secretkey)
-mensagem1 = 12
-mensagem2 = 2
+#curva = CurvaEliptica(18, 19, primo)
+#publickey_1 = Ponto(53,45,False)
+#publickey_2 = multiplicacaoPonto(publickey_1, curva, secretkey)
+print('Chave publica 1 = ' + str(publickey_1.x), str(publickey_1.y))
+print('Chave publica 2 = ' + str(publickey_2.x) , str(publickey_2.y))
+mensagem1 = 498712097820394872304
+mensagem2 = 129378129381729783612
 cript = elGamal_encr(mensagem1, mensagem2, curva, publickey_1, publickey_2)
 elGamal_decr(cript, curva, secretkey)
